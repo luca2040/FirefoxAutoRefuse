@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Auto Refuse Cookies",
+  "version": "1.0",
+  "description": "Auto refuses Youtube and Google search cookies.",
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "refuseYoutube.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.google.com/search*"
+      ],
+      "js": [
+        "refuseGoogle.js"
+      ]
+    }
+  ]
+}
